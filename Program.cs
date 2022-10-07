@@ -7,7 +7,10 @@ if (number1>number2)
     Console.WriteLine($"Первое число {number1} большее, а второе число {number2} меньшее");
     else
     Console.WriteLine($"Второе число {number2} большее, а первое число {number1} меньшее");
-*/    
+*/  
+
+
+/* Задача 4. Найти максимальное из 3 чисел
 Console.WriteLine("Введите первое число: ");
 int number1 = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
@@ -20,3 +23,11 @@ if (number2>max)
 if (number3>max) 
     max = number3;
 Console.WriteLine("Масксимальное число " + max);
+*/
+
+Console.WriteLine("Введите число: ");
+int number1 = int.Parse(Console.ReadLine());
+if (number1%2 == 0)
+Console.WriteLine("Число является четным");
+else
+Console.WriteLine("Число является нечетным");
