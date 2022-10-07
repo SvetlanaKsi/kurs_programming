@@ -25,9 +25,11 @@ if (number3>max)
 Console.WriteLine("Масксимальное число " + max);
 */
 
+/* Задача 6. Четное или нечетное число
 Console.WriteLine("Введите число: ");
 int number1 = int.Parse(Console.ReadLine());
 if (number1%2 == 0)
 Console.WriteLine("Число является четным");
 else
 Console.WriteLine("Число является нечетным");
+*/
