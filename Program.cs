@@ -34,6 +34,7 @@ else
 Console.WriteLine("Число является нечетным");
 */
 
+/*Задача 8 На вход принимает число N, на выходе показывает все четные числа от 1 до N 
 Console.WriteLine("Введите число: ");
 int N = int.Parse(Console.ReadLine());
 int i = 2;
@@ -42,6 +43,15 @@ while (i<=N)
     if (i % 2 == 0)
     {
         Console.WriteLine(i + ", ");
-        i++;
     }
+i++;
 }  
+*/
+
+/*Семинар 2
+Задача 10 На входе 3-х значное число и на выходе показывает вторую цифру этого числа.
+int num = new Random().Next(100,999);
+Console.WriteLine(num);
+int result = (num/10)%10;
+Console.WriteLine (result);
+*/
