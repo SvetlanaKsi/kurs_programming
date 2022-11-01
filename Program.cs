@@ -55,3 +55,60 @@ Console.WriteLine(num);
 int result = (num/10)%10;
 Console.WriteLine (result);
 */
+
+
+
+
+/*Console.WriteLine ("Введите число: ");
+int num = int.Parse(Console.ReadLine());
+string str = num.ToString();
+int[] b = new int[str.Length];
+for( int i=0; i< str.Length; i++)
+    {
+     b[i] = int.Parse(str[i].ToString());
+    } 
+if (i=2)
+     Console.WriteLine ("Третьей цифры нет"); 
+else              
+Console.WriteLine ($"Третья цифра заданого числа: {b[2]}");
+*/
+
+/* Семинар 4. Задача 25. 
+Console.WriteLine ("Введите число A: ");
+int A = int.Parse(Console.ReadLine());
+Console.WriteLine ("Введите число B: ");
+int B = int.Parse(Console.ReadLine());
+Console.WriteLine ($"{A} в степени {B} = " + Math.Pow (A,B));
+*/
+
+/* Семинар 4. Задача 27. 
+Console.WriteLine("Введите число");
+int i = int.Parse(Console.ReadLine());
+int sum = 0;
+while (i > 0)
+{
+    int num = i % 10;
+    i = i / 10;
+    sum = sum + num;
+}
+Console.WriteLine("сумма всех цифр в числе равна: " + sum);
+*/
+
+
+/* Семинар 4. Задача 29.
+int[] CreateMas(){
+    int kol = 8;
+    int[] arr = new int[8];
+    for (int i = 0; i < kol; i++) {
+        arr[i] = new Random().Next(11,35);
+    }
+    return arr;
+}
+void Print (int[] arr) {
+    Console.WriteLine (string.Join (" ",arr));
+}
+int[] arr = new int[8];
+arr = CreateMas ();
+Print (arr);
+*/
+
