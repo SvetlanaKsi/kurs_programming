@@ -156,3 +156,34 @@ int sum = 0;
 Console.WriteLine($"{sum} - сумма нечетных элементов");
 */
 
+/*Семинар 5 Задача 38 Найти разницу между максимальным и минимальным значением
+int[] CreateMas(){
+    int kol = 5;
+    int[] arr = new int[5];
+    for (int i = 0; i < kol; i++) {
+        arr[i] = new Random().Next(1,10);
+    }
+    return arr;
+}
+void Print (int[] arr) {
+    Console.WriteLine (string.Join (" ",arr));
+}
+int[] arr = new int[5];
+arr = CreateMas ();
+Print (arr);
+int max = 0;
+int min = 1;
+for (int i = 0; i < arr.Length; i++)
+{
+    if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+    if (arr[i] < min)
+        {
+            min = arr[i];
+        }
+}
+Console.WriteLine($" Максимальное значение = {max}, минимальное значение = {min}");
+Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+/*
