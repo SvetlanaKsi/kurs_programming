@@ -112,3 +112,25 @@ arr = CreateMas ();
 Print (arr);
 */
 
+/* Семинар 5 Задача 34 Массив из положительных трехзначных чисел, и показать сколько четных
+int[] CreateMas(){
+    int kol = 8;
+    int[] arr = new int[8];
+    for (int i = 0; i < kol; i++) {
+        arr[i] = new Random().Next(100,999);
+    }
+    return arr;
+}
+void Print (int[] arr) {
+    Console.WriteLine (string.Join (" ",arr));
+}
+int[] arr = new int[8];
+arr = CreateMas ();
+Print (arr);
+int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    if (arr[i] % 2 == 0)
+count++;
+Console.WriteLine($"всего {arr.Length} чисел, {count} из них чётные");
+*/
+
