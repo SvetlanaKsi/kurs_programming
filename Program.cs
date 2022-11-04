@@ -134,3 +134,25 @@ count++;
 Console.WriteLine($"всего {arr.Length} чисел, {count} из них чётные");
 */
 
+/*Семинар 5 Задача 36 Массив из положительных чисел, и показать сумму на нечетных позициях
+int[] CreateMas(){
+    int kol = 5;
+    int[] arr = new int[5];
+    for (int i = 0; i < kol; i++) {
+        arr[i] = new Random().Next(1,10);
+    }
+    return arr;
+}
+void Print (int[] arr) {
+    Console.WriteLine (string.Join (" ",arr));
+}
+int[] arr = new int[5];
+arr = CreateMas ();
+Print (arr);
+int sum = 0;
+    for (int i = 0; i < arr.Length; i+=2)
+    sum = sum + arr[i];
+
+Console.WriteLine($"{sum} - сумма нечетных элементов");
+*/
+
