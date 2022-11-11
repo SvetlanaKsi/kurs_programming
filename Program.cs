@@ -98,60 +98,60 @@ Console.WriteLine("сумма всех цифр в числе равна: " + su
 /* Семинар 4. Задача 29.
 int[] CreateMas(){
     int kol = 8;
-    int[] arr = new int[8];
+    int[] matr = new int[8];
     for (int i = 0; i < kol; i++) {
-        arr[i] = new Random().Next(11,35);
+        matr[i] = new Random().Next(11,35);
     }
-    return arr;
+    return matr;
 }
-void Print (int[] arr) {
-    Console.WriteLine (string.Join (" ",arr));
+void Print (int[] matr) {
+    Console.WriteLine (string.Join (" ",matr));
 }
-int[] arr = new int[8];
-arr = CreateMas ();
-Print (arr);
+int[] matr = new int[8];
+matr = CreateMas ();
+Print (matr);
 */
 
 /* Семинар 5 Задача 34 Массив из положительных трехзначных чисел, и показать сколько четных
 int[] CreateMas(){
     int kol = 8;
-    int[] arr = new int[8];
+    int[] matr = new int[8];
     for (int i = 0; i < kol; i++) {
-        arr[i] = new Random().Next(100,999);
+        matr[i] = new Random().Next(100,999);
     }
-    return arr;
+    return matr;
 }
-void Print (int[] arr) {
-    Console.WriteLine (string.Join (" ",arr));
+void Print (int[] matr) {
+    Console.WriteLine (string.Join (" ",matr));
 }
-int[] arr = new int[8];
-arr = CreateMas ();
-Print (arr);
+int[] matr = new int[8];
+matr = CreateMas ();
+Print (matr);
 int count = 0;
-    for (int i = 0; i < arr.Length; i++)
-    if (arr[i] % 2 == 0)
+    for (int i = 0; i < matr.Length; i++)
+    if (matr[i] % 2 == 0)
 count++;
-Console.WriteLine($"всего {arr.Length} чисел, {count} из них чётные");
+Console.WriteLine($"всего {matr.Length} чисел, {count} из них чётные");
 */
 
 /*Семинар 5 Задача 36 Массив из положительных чисел, и показать сумму на нечетных позициях
 int[] CreateMas(){
     int kol = 5;
-    int[] arr = new int[5];
+    int[] matr = new int[5];
     for (int i = 0; i < kol; i++) {
-        arr[i] = new Random().Next(1,10);
+        matr[i] = new Random().Next(1,10);
     }
-    return arr;
+    return matr;
 }
-void Print (int[] arr) {
-    Console.WriteLine (string.Join (" ",arr));
+void Print (int[] matr) {
+    Console.WriteLine (string.Join (" ",matr));
 }
-int[] arr = new int[5];
-arr = CreateMas ();
-Print (arr);
+int[] matr = new int[5];
+matr = CreateMas ();
+Print (matr);
 int sum = 0;
-    for (int i = 0; i < arr.Length; i+=2)
-    sum = sum + arr[i];
+    for (int i = 0; i < matr.Length; i+=2)
+    sum = sum + matr[i];
 
 Console.WriteLine($"{sum} - сумма нечетных элементов");
 */
@@ -159,29 +159,29 @@ Console.WriteLine($"{sum} - сумма нечетных элементов");
 /*Семинар 5 Задача 38 Найти разницу между максимальным и минимальным значением
 int[] CreateMas(){
     int kol = 5;
-    int[] arr = new int[5];
+    int[] matr = new int[5];
     for (int i = 0; i < kol; i++) {
-        arr[i] = new Random().Next(1,10);
+        matr[i] = new Random().Next(1,10);
     }
-    return arr;
+    return matr;
 }
-void Print (int[] arr) {
-    Console.WriteLine (string.Join (" ",arr));
+void Print (int[] matr) {
+    Console.WriteLine (string.Join (" ",matr));
 }
-int[] arr = new int[5];
-arr = CreateMas ();
-Print (arr);
+int[] matr = new int[5];
+matr = CreateMas ();
+Print (matr);
 int max = 0;
 int min = 1;
-for (int i = 0; i < arr.Length; i++)
+for (int i = 0; i < matr.Length; i++)
 {
-    if (arr[i] > max)
+    if (matr[i] > max)
         {
-            max = arr[i];
+            max = matr[i];
         }
-    if (arr[i] < min)
+    if (matr[i] < min)
         {
-            min = arr[i];
+            min = matr[i];
         }
 }
 Console.WriteLine($" Максимальное значение = {max}, минимальное значение = {min}");
@@ -267,3 +267,74 @@ double y = k2 * x + b2;
 
 Console.WriteLine($"две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
 */
+
+/*Console.Write("Введите номер строки: ");
+int str = Convert.ToInt32(Console.ReadLine()) - 1;
+Console.Write("Введите номер столбца: ");
+int stlb = Convert.ToInt32(Console.ReadLine()) - 1;
+int n = 5; 
+int m = 7; 
+Random random = new Random();
+int[,] matr = new int[n, m];
+Console.WriteLine("Исходный массив: ");
+for (int i = 0; i < matr.GetLength(0); i++)
+{
+    for (int j = 0; j < matr.GetLength(1); j++)
+{
+    matr[i, j] = random.Next(10, 99);
+Console.Write("{0} ", matr[i, j]);
+}
+Console.WriteLine();
+}
+    if (str < 0 | str > matr.GetLength(0) - 1 | stlb
+ < 0 | stlb
+ > matr.GetLength(1) - 1)
+{
+Console.WriteLine("Элемент не существует  ");
+}
+    else
+{
+    Console.WriteLine("Значение элемента массива = {0}", matr[str, stlb
+]);
+}
+Console.ReadLine();
+*/
+
+
+Сonsole.Write("Введите номер строки: ");
+int str = Convert.ToInt32(Console.ReadLine()) - 1;
+Console.Write("Введите номер столбца: ");
+int stlb = Convert.ToInt32(Console.ReadLine()) - 1;
+void PrintArray(int[,] matr)
+{
+ for (int i = 0; i < matr.GetLength(0); i++)
+ {
+ for (int j = 0; j < matr.GetLength(1); j++)
+ {
+ Console.Write($"{matr[i, j]} ");
+ }
+ Console.WriteLine();
+ }
+}
+void FillArray(int[,] matr)
+{
+ for (int i = 0; i < matr.GetLength(0); i++)
+ {
+ for (int j = 0; j < matr.GetLength(1); j++)
+ {
+ matr[i,j] = new Random().Next(1,10);
+ }
+ }
+}
+int[,] matrix = new int[3, 4];
+FillArray(matrix);
+PrintArray(matrix);
+
+if (str < 0 | str > matrix.GetLength(0) - 1 | stlb < 0 | stlb> matrix.GetLength(1) - 1)
+{
+Console.WriteLine("Элемент не существует  ");
+}
+    else
+{
+    Console.WriteLine("Значение элемента массива = {0}", matrix[str, stlb]);
+}
