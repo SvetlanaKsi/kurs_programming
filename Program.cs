@@ -268,73 +268,99 @@ double y = k2 * x + b2;
 Console.WriteLine($"две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
 */
 
-/*Console.Write("Введите номер строки: ");
-int str = Convert.ToInt32(Console.ReadLine()) - 1;
-Console.Write("Введите номер столбца: ");
-int stlb = Convert.ToInt32(Console.ReadLine()) - 1;
-int n = 5; 
-int m = 7; 
-Random random = new Random();
-int[,] matr = new int[n, m];
-Console.WriteLine("Исходный массив: ");
-for (int i = 0; i < matr.GetLength(0); i++)
+/*Задача 50 Семинар 7
+Console.WriteLine("введите номер строки");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите номер столбца");
+int m = Convert.ToInt32(Console.ReadLine());
+int [,] numbers = new int [5,5];
+FillArrayRandomNumbers(numbers);
+
+if (n > numbers.GetLength(0) || m > numbers.GetLength(1))
 {
-    for (int j = 0; j < matr.GetLength(1); j++)
+    Console.WriteLine("такого элемента нет");
+}
+else
 {
-    matr[i, j] = random.Next(10, 99);
-Console.Write("{0} ", matr[i, j]);
+    Console.WriteLine($"значение элемента {n} строки и {m} столбца равно {numbers[n-1,m-1]}");
+}
+
+PrintArray(numbers);
+
+void FillArrayRandomNumbers(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+        {        
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                array [i,j] = new Random().Next(-100, 100)/10;
+            }   
+        }
+}
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i,j] + " ");
+        }   
+        Console.Write("]");
+        Console.WriteLine(""); 
+    }
+}
+
+
+Задача 50 Семинар 7
+Console.WriteLine("введите количество строк");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите количество столбцов");
+int m = Convert.ToInt32(Console.ReadLine());
+
+int[,] numbers = new int[n, m];
+FillArrayRandomNumbers(numbers);
+
+
+for (int j = 0; j < numbers.GetLength(1); j++)
+{
+    double avarage = 0;
+    for (int i = 0; i < numbers.GetLength(0); i++)
+    {
+        avarage = (avarage + numbers[i, j]);
+    }
+    avarage = avarage / n;
+    Console.Write(avarage + "; ");
 }
 Console.WriteLine();
-}
-    if (str < 0 | str > matr.GetLength(0) - 1 | stlb
- < 0 | stlb
- > matr.GetLength(1) - 1)
+PrintArray(numbers);
+
+
+
+void FillArrayRandomNumbers(int[,] array)
 {
-Console.WriteLine("Элемент не существует  ");
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(0, 10);
+        }
+    }
 }
-    else
+
+void PrintArray(int[,] array)
 {
-    Console.WriteLine("Значение элемента массива = {0}", matr[str, stlb
-]);
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.Write("]");
+        Console.WriteLine("");
+    }
 }
-Console.ReadLine();
 */
-
-
-Сonsole.Write("Введите номер строки: ");
-int str = Convert.ToInt32(Console.ReadLine()) - 1;
-Console.Write("Введите номер столбца: ");
-int stlb = Convert.ToInt32(Console.ReadLine()) - 1;
-void PrintArray(int[,] matr)
-{
- for (int i = 0; i < matr.GetLength(0); i++)
- {
- for (int j = 0; j < matr.GetLength(1); j++)
- {
- Console.Write($"{matr[i, j]} ");
- }
- Console.WriteLine();
- }
-}
-void FillArray(int[,] matr)
-{
- for (int i = 0; i < matr.GetLength(0); i++)
- {
- for (int j = 0; j < matr.GetLength(1); j++)
- {
- matr[i,j] = new Random().Next(1,10);
- }
- }
-}
-int[,] matrix = new int[3, 4];
-FillArray(matrix);
-PrintArray(matrix);
-
-if (str < 0 | str > matrix.GetLength(0) - 1 | stlb < 0 | stlb> matrix.GetLength(1) - 1)
-{
-Console.WriteLine("Элемент не существует  ");
-}
-    else
-{
-    Console.WriteLine("Значение элемента массива = {0}", matrix[str, stlb]);
-}
